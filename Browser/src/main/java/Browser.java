@@ -23,13 +23,7 @@ public class Browser {
             }
             if (manager.loadAll()){
                 for (Map.Entry<String, Object> e : manager.getPluginList().entrySet()){
-                    //pluginList.merge(e.getKey(), e.getValue(), (oldPlugin, newPlugin) ->(oldPlugin = newPlugin));
-                    if (pluginList.containsKey(e.getKey())){
-                        pluginList.replace(e.getKey(),e.getValue());
-                    }
-                    else{
-                        pluginList.put(e.getKey(), e.getValue());
-                    }
+                    pluginList.merge(e.getKey(), e.getValue(), (oldPlugin, newPlugin) ->(oldPlugin = newPlugin));
                 }
             }
             Thread.sleep(3000);
