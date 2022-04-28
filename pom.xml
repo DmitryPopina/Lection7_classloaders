@@ -11,7 +11,7 @@
     <modules>
         <module>PluginManager</module>
         <module>Browser</module>
-        <module>Plugins</module>
+        <module>Plugin</module>
     </modules>
 
     <dependencies>

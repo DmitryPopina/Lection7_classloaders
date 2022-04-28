@@ -1,9 +1,9 @@
 public class BasicPlugin implements Plugin {
     private final String publicName = "BasicPlugin";
-    private final int version = 1;
+    private final int version = 2;
     @Override
     public void doUseful() {
-        System.out.printf ("%s version %d", this.publicName, this.version);
+        System.out.printf ("I'm %s v%d loaded from %s \n", this.publicName, this.version, this.getClass().getClassLoader().getName());
     }
 
     @Override
